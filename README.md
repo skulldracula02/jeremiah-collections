@@ -9,6 +9,9 @@ Jeremiah Collections is a responsive fashion and lifestyle website for a fiction
 - **Industry:** Fashion and lifestyle retail
 - **Target audience:** Style-conscious shoppers looking for quality apparel and finishing pieces
 
+### Why I Chose This Organisation
+I chose Jeremiah Collections because it is close to me and affordable. It also offers very nice brands and has the potential to grow as it keeps up with fashion trends.
+
 ## Website Goals and KPIs
 - Present the store as modern, welcoming and locally relevant.
 - Help visitors browse apparel, watches and accessories quickly.
