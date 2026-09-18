@@ -22,6 +22,8 @@ Jeremiah Collections is a responsive fashion and lifestyle website for a fiction
 - `gallery.html` - visual gallery of the collection and styling direction.
 - `contact.html` - address, opening hours, email and phone details.
 - `styles.css` - shared external stylesheet with responsive breakpoints.
+- `capture-screenshots.mjs` - browser automation script for submission evidence.
+- `screenshots/` - desktop, tablet and mobile render evidence.
 
 ## Design and Technical Requirements
 - Semantic HTML5 elements: header, nav, main, section, article, figure and footer.
@@ -29,7 +31,32 @@ Jeremiah Collections is a responsive fashion and lifestyle website for a fiction
 - Relative navigation links between all pages.
 - Descriptive alternative text for images.
 - Typography uses Playfair Display for headings and DM Sans for body copy.
-- Layout tested for desktop and mobile widths.
+- Responsive image loading uses `srcset` and `sizes` attributes.
+- Relative CSS units, percentages, media queries and breakpoint-specific layouts are used.
+- Layout tested for desktop, tablet and mobile widths.
+
+## Assignment Checklist
+- [x] Target organisation and audience identified.
+- [x] Website goals, features and KPIs documented.
+- [x] Five linked HTML pages created.
+- [x] Semantic HTML structure implemented.
+- [x] External stylesheet linked to every page.
+- [x] Visual assets, alternative text and responsive image loading added.
+- [x] Typography, layout, colour and interactive states styled with CSS.
+- [x] Responsive breakpoints and relative units implemented.
+- [x] Navigation tested across pages.
+- [x] Code comments added for non-obvious shared styling decisions.
+- [x] Desktop, tablet and mobile screenshots captured below.
+- [x] Project pushed to the GitHub repository.
+
+The proposal document's Calibri 11-point and 1.5 line-spacing rules apply to the written proposal document. The website follows the Part 2 web-typography requirement with a deliberate display/body font pairing, readable sizing and responsive spacing.
+
+## Screenshot Evidence
+![Desktop screenshot](screenshots/desktop.png)
+
+![Tablet screenshot](screenshots/tablet.png)
+
+![Mobile screenshot](screenshots/mobile.png)
 
 ## Project Timeline
 1. Research and proposal: identify the target audience, objectives and visual direction.
@@ -43,6 +70,7 @@ The local static server was run with `python -m http.server 4173`. Browser valid
 - All five navigation links resolve to the expected pages.
 - The homepage loads with no console errors or failed image requests.
 - The project contains six content sections on the homepage and eight visual assets.
+- Desktop, tablet and mobile screenshots were captured with `capture-screenshots.mjs`.
 - The editor reports no errors in the HTML or CSS files.
 
 ## References
