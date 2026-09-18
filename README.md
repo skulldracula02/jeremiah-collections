@@ -33,7 +33,9 @@ I chose Jeremiah Collections because it is close to me and affordable. It also o
 - External CSS stylesheet with reusable custom properties and responsive media queries.
 - Relative navigation links between all pages.
 - Descriptive alternative text for images.
-- Typography uses Playfair Display for headings and DM Sans for body copy.
+- Typography uses Calibri, 11pt body text and 1.5 line spacing to follow the supplied brief.
+- Customers are described as people with class, strong fashion sense and an interest in current "drip".
+- Product categories include hoodies, T-shirts, jorts/shorts, cargo pants, sweatpants, sneakers, boots and watches.
 - Responsive image loading uses `srcset` and `sizes` attributes.
 - Relative CSS units, percentages, media queries and breakpoint-specific layouts are used.
 - Layout tested for desktop, tablet and mobile widths.
