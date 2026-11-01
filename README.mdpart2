@@ -58,7 +58,7 @@ I chose Jeremiah Collections because it is close to me and affordable. It also o
 - [x] Navigation tested across pages.
 - [x] Code comments added for non-obvious shared styling decisions.
 - [x] Desktop, tablet and mobile screenshots captured below.
-- [ ] Latest task changes pushed to the GitHub repository.
+- [x] Latest task changes pushed to the GitHub repository: https://github.com/skulldracula02/jeremiah-collections
 - [x] Part 2 feedback: added product filtering, gallery lightbox, form validation, and SEO metadata.
 - [x] Part 3: connected enquiry forms to a Vercel serverless email endpoint.
 - [x] Added responsive mobile navigation.
