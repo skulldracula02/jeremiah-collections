@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ask Jeremiah Collections about apparel, watches, accessories, product availability or a styling appointment in Pretoria Central.">
+    <meta name="theme-color" content="#f3c623">
+    <meta property="og:title" content="Make an Enquiry | Jeremiah Collections">
+    <meta property="og:description" content="Ask about the Jeremiah Collections edit, availability or a styling appointment.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://jeremiah-collections.vercel.app/enquiry.html">
+    <title>Make an Enquiry | Jeremiah Collections</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header page-header">
+        <a class="brand" href="index.html" aria-label="Jeremiah Collections home">
+            <span class="brand-mark">JC</span>
+            <span>Jeremiah <strong>Collections</strong></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+            <span>Menu</span>
+        </button>
+        <nav id="primary-navigation" class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Collections</a>
+            <a href="about.html">Our Story</a>
+            <a href="gallery.html">Gallery</a>
+            <a class="active" href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a class="nav-cta" href="contact.html">Visit us <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+        <section class="page-hero page-hero-clay">
+            <p class="eyebrow">Talk to our team / 05</p>
+            <h1>Tell us what<br><em>you’re looking for.</em></h1>
+            <p>Ask us about a product, check availability or arrange a personal styling visit.</p>
+        </section>
+
+        <section class="contact-page section">
+            <div>
+                <p class="eyebrow">A personal response</p>
+                <h2>Good style<br><em>starts here.</em></h2>
+                <p class="contact-lead">Share what you have in mind and our Pretoria Central team will get back to you using the details you provide.</p>
+                <div class="contact-details contact-details-light">
+                    <p>Jeremiah Collections<br>34 Church Street<br>Pretoria Central, 0002</p>
+                    <a href="mailto:hello@jeremiahcollections.co.za">hello@jeremiahcollections.co.za</a>
+                    <a href="tel:0832247270">0832247270</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <p class="eyebrow">Product enquiry</p>
+                <h3>How can we help?</h3>
+                <form class="contact-form" novalidate>
+                    <div class="form-row">
+                        <label for="name">Full name</label>
+                        <input id="name" name="name" type="text" minlength="2" maxlength="100" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-row two-up">
+                        <div>
+                            <label for="email">Email address</label>
+                            <input id="email" name="email" type="email" maxlength="254" autocomplete="email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone number</label>
+                            <input id="phone" name="phone" type="tel" inputmode="tel" maxlength="30" autocomplete="tel" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row two-up">
+                        <div>
+                            <label for="enquiryType">What is your enquiry about?</label>
+                            <select id="enquiryType" name="enquiryType" required>
+                                <option value="">Select one</option>
+                                <option value="collection">Product or collection</option>
+                                <option value="appointment">Styling appointment</option>
+                                <option value="stock">Product availability</option>
+                                <option value="general">Something else</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="visitDate">Preferred visit date (optional)</label>
+                            <input id="visitDate" name="visitDate" type="date">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Tell us a little more</label>
+                        <textarea id="message" name="message" rows="5" minlength="20" maxlength="5000" required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button button-dark">Send enquiry</button>
+                    </div>
+                    <p class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="index.html"><span class="brand-mark">JC</span><span>Jeremiah <strong>Collections</strong></span></a>
+        <p>Dress with intention.</p>
+        <p>© 2026 Jeremiah Collections</p>
+    </footer>
+</body>
+</html>

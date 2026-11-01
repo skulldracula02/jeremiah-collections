@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jeremiah Collections is a modern fashion and lifestyle store in Pretoria Central.">
+    <meta name="description" content="Jeremiah Collections is a modern fashion and lifestyle store in Pretoria Central with curated apparel, watches, accessories and a welcoming local shopping experience.">
+    <meta name="theme-color" content="#f3c623">
+    <meta property="og:title" content="Jeremiah Collections | Dress With Intention">
+    <meta property="og:description" content="Pretoria Central fashion and lifestyle store featuring apparel, watches and accessories.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://jeremiah-collections.vercel.app/">
     <title>Jeremiah Collections | Dress With Intention</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ClothingStore",
+            "name": "Jeremiah Collections",
+            "url": "https://jeremiah-collections.vercel.app/",
+            "telephone": "+27832247270",
+            "email": "hello@jeremiahcollections.co.za",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "34 Church Street",
+                "addressLocality": "Pretoria Central",
+                "postalCode": "0002",
+                "addressCountry": "ZA"
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="site-header">
@@ -13,11 +36,16 @@
             <span class="brand-mark">JC</span>
             <span>Jeremiah <strong>Collections</strong></span>
         </a>
-        <nav class="site-nav" aria-label="Main navigation">
+        <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+            <span>Menu</span>
+        </button>
+        <nav id="primary-navigation" class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="products.html">Collections</a>
             <a href="about.html">Our Story</a>
             <a href="gallery.html">Gallery</a>
+            <a href="enquiry.html">Enquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
         <a class="nav-cta" href="contact.html">Visit us <span aria-hidden="true">↗</span></a>

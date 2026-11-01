@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jeremiah-collections.vercel.app/sitemap.xml

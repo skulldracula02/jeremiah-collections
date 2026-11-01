@@ -1,0 +1,12 @@
+{
+  "name": "jeremiah-collections",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jeremiah Collections website and enquiry endpoint",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

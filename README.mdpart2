@@ -24,9 +24,15 @@ I chose Jeremiah Collections because it is close to me and affordable. It also o
 - `about.html` - organisation story, values and brand point of view.
 - `gallery.html` - visual gallery of the collection and styling direction.
 - `contact.html` - address, opening hours, email and phone details.
+- `enquiry.html` - product, availability and styling appointment enquiries.
 - `styles.css` - shared external stylesheet with responsive breakpoints.
+- `script.js` - product filters, gallery lightbox and client-side form validation/AJAX.
+- `server.js` - local Node.js static server and enquiry recorder.
+- `api/enquiries.js` - Vercel serverless endpoint that validates and emails enquiries.
+- `lib/` - shared validation and Resend email delivery helpers.
 - `capture-screenshots.mjs` - browser automation script for submission evidence.
 - `screenshots/` - desktop, tablet and mobile render evidence.
+- `robots.txt` and `sitemap.xml` - crawler guidance and sitemap.
 
 ## Design and Technical Requirements
 - Semantic HTML5 elements: header, nav, main, section, article, figure and footer.
@@ -43,7 +49,7 @@ I chose Jeremiah Collections because it is close to me and affordable. It also o
 ## Assignment Checklist
 - [x] Target organisation and audience identified.
 - [x] Website goals, features and KPIs documented.
-- [x] Five linked HTML pages created.
+- [x] Six linked HTML pages created.
 - [x] Semantic HTML structure implemented.
 - [x] External stylesheet linked to every page.
 - [x] Visual assets, alternative text and responsive image loading added.
@@ -52,7 +58,14 @@ I chose Jeremiah Collections because it is close to me and affordable. It also o
 - [x] Navigation tested across pages.
 - [x] Code comments added for non-obvious shared styling decisions.
 - [x] Desktop, tablet and mobile screenshots captured below.
-- [x] Project pushed to the GitHub repository.
+- [ ] Latest task changes pushed to the GitHub repository.
+- [x] Part 2 feedback: added product filtering, gallery lightbox, form validation, and SEO metadata.
+- [x] Part 3: connected enquiry forms to a Vercel serverless email endpoint.
+- [x] Added responsive mobile navigation.
+- [x] Added Vercel deployment configuration, canonical URLs, sitemap and robots rules for the production domain.
+- [x] Deployed the website to Vercel: https://jeremiah-collections.vercel.app/
+- [ ] Configure Resend credentials in Vercel to activate email delivery.
+- [ ] Promote the live site on the organisation's social profiles and pursue relevant partner backlinks.
 
 The proposal document's Calibri 11-point and 1.5 line-spacing rules apply to the written proposal document. The website follows the Part 2 web-typography requirement with a deliberate display/body font pairing, readable sizing and responsive spacing.
 
@@ -71,23 +84,49 @@ The proposal document's Calibri 11-point and 1.5 line-spacing rules apply to the
 5. Submission preparation: update this README and organise the project files.
 
 ## Testing Evidence
-The local static server was run with `python -m http.server 4173`. Browser validation confirmed:
-- All five navigation links resolve to the expected pages.
+Run the local preview with Node.js 20 or newer:
+
+```text
+npm start
+```
+
+Then open `http://127.0.0.1:4173/`. Locally, valid enquiries are appended to `.data/enquiries.jsonl`, which is excluded from Git because it contains personal information. The live Vercel deployment is at https://jeremiah-collections.vercel.app/. Its serverless endpoint uses Resend and does not depend on ephemeral serverless disk storage.
+
+Before deploying, configure these Vercel environment variables:
+
+- `RESEND_API_KEY` - a private Resend API key.
+- `RESEND_FROM_EMAIL` - a sender address on a domain verified with Resend.
+- `ENQUIRY_TO_EMAIL` - the organisation's receiving address (currently `hello@jeremiahcollections.co.za`).
+
+Never commit API keys. `.env.example` shows the required variable names and is not a secrets file. The live site is deployed, but the enquiry API will return a setup message until the Resend variables are added in Vercel Project Settings → Environment Variables and a new deployment is created.
+
+Browser validation confirmed:
+- Navigation links resolve to the six HTML pages.
 - The homepage loads with no console errors or failed image requests.
 - The project contains six content sections on the homepage and eight visual assets.
 - Desktop, tablet and mobile screenshots were captured with `capture-screenshots.mjs`.
 - The editor reports no errors in the HTML or CSS files.
+- The local enquiry API accepts valid JSON submissions and rejects invalid input.
+- The Vercel production deployment serves the home, enquiry and contact pages; email delivery awaits Resend configuration.
+
+## Changelog
+- **2026-11-01 — Part 3 and Part 2 feedback:** Added interactive product category filters, gallery lightbox, validated enquiry and contact forms, SEO metadata, `robots.txt`, `sitemap.xml`, and responsive mobile navigation. Added a dedicated product enquiry page and a Vercel serverless AJAX endpoint that sends validated submissions through Resend. Local form submissions are stored in the ignored `.data/enquiries.jsonl` file.
+- **2026-11-01 — Vercel deployment:** Deployed the static site and enquiry function to `https://jeremiah-collections.vercel.app/`. Updated canonical URLs, sitemap and robots rules for the live domain and added local-business structured data. Configure Resend environment variables before treating live email delivery as enabled.
 
 ## References
 - Image assets: Unsplash, accessed September 2026, used through responsive image URLs.
 - Fonts: Google Fonts, Playfair Display and DM Sans, accessed September 2026.
+- Email delivery: Resend API, accessed November 2026.
+- Hosting: Vercel, accessed November 2026.
 - Project brief: Jeremiah Collections Proposal, supplied with the assignment.
 
 ## Local Preview
 From this folder, run:
 
 ```text
-python -m http.server 4173
+npm start
 ```
 
 Then open `http://127.0.0.1:4173/` in a browser.
+
+For production, the website is deployed at https://jeremiah-collections.vercel.app/. Set the three Resend environment variables in the Vercel dashboard and redeploy to enable email. Add the production domain to Google Search Console and request sitemap indexing. Social media promotion and backlinks require the organisation's real profiles and partner outreach; no profile URLs or partner websites were supplied, so none have been invented.
